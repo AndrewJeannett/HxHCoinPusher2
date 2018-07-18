@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Ramp : MonoBehaviour {
 
-	public Collider rampCollider;
+	public Transform shooterArm;
+
+	private Transform pointer;
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetAxis("Mouse X") < 0) {
-			Debug.Log("Mouse moved left");
-		}
-		if (Input.GetAxis("Mouse X") > 0) {
-			Debug.Log("Mouse moved right");
-		}
+		float x = Input.GetAxis("Mouse X");
+		float y = Input.GetAxis("Mouse Y");
+		float z = Input.GetAxis("Mouse Z");
+		pointer.localPosition = new Vector3(x, y, z);
+		shooterArm.LookAt(pointer);
 	}
 }
