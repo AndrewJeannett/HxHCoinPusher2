@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class spawnDisc2 : MonoBehaviour {
+public class spawnDisc3 : MonoBehaviour {
     public Rigidbody discPrefab;
     public Transform Shooter;
     public int discCounter;
@@ -21,7 +21,7 @@ public class spawnDisc2 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown("Fire1") & (ScoreTracker.score > 0))
+        if (Input.GetButtonDown("Jump") & (ScoreTracker.score > 0))
         {
             Rigidbody clone;
             clone = Instantiate(discPrefab, Shooter.position, Shooter.rotation,discObject );
