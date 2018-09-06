@@ -15,7 +15,7 @@ public class ScoreTracker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-            countText.text = "$" + ScoreTracker.score;
+            //countText.text = "$" + ScoreTracker.score;
         
         
 	}
